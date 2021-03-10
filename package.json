@@ -1,0 +1,28 @@
+{
+  "version": "1.0.4",
+  "name": "homebridge-xiaomi-plug-m3",
+  "description": "HomeBridge XiaoMi Plug M3",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/Caldis/homebridge-xiaomi-plug-m3",
+  "dependencies": {
+    "homebridge-mi-devices": "^1.5.12"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "homebridge": "latest",
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepublishOnly": "npm version patch --force && rimraf ./dist && tsc",
+    "relink": "npm run prepublishOnly && npm unlink && npm link"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "homebridge": ">=1.0.0"
+  },
+  "author": "Caldis",
+  "license": "ISC"
+}

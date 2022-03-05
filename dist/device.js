@@ -8,6 +8,7 @@ class Device {
         this.PlugSetup = () => {
             this.PlugDevice.addCharacteristicListener(homebridge_mi_devices_1.Shared.hap.Characteristic.On, {
                 get: {
+                    defaultValue: 0,
                     formatter: (valueMapping) => valueMapping[device_constant_1.Specs.SwitchStatus] === device_constant_1.SwitchStatusCode.On
                         ? 1
                         : 0

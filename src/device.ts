@@ -1,5 +1,5 @@
 import { AccessoryPlugin, Service, Categories } from 'homebridge'
-import { MiIdentify, Shared, MIoTDevice, MIIODevice } from 'homebridge-mi-devices'
+import { MiIdentify, Shared, MIIODevice } from 'homebridge-mi-devices'
 import { Specs, SwitchStatusCode } from './device.constant'
 
 type Props = {
@@ -37,6 +37,7 @@ export class Device implements AccessoryPlugin {
   PlugSetup = () => {
     this.PlugDevice.addCharacteristicListener(Shared.hap.Characteristic.On, {
       get: {
+        defaultValue: 0,
         formatter: (valueMapping) => valueMapping[Specs.SwitchStatus] === SwitchStatusCode.On
           ? 1
           : 0

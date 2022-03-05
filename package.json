@@ -1,11 +1,11 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "homebridge-xiaomi-plug-m3",
   "description": "HomeBridge XiaoMi Plug M3",
   "main": "dist/index.js",
   "homepage": "https://github.com/Caldis/homebridge-xiaomi-plug-m3",
   "dependencies": {
-    "homebridge-mi-devices": "^1.5.14"
+    "homebridge-mi-devices": "^1.6.8"
   },
   "devDependencies": {
     "@types/node": "latest",
